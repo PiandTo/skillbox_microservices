@@ -1,0 +1,1 @@
+-- INSERT INTO user_schema.subscription (id, name) VALUES ('a99d56c6-a13d-427a-a443-8c77de18dc14', 'NIKITA');
