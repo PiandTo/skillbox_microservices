@@ -12,7 +12,7 @@ create TABLE user_schema.user (
     phone_number VARCHAR(60),
     login VARCHAR(60),
     avatar VARCHAR(60),
-    descriptiion VARCHAR(120)
+    description VARCHAR(120)
     -- address_id UUID,
     -- CONSTRAINT user_address_fk FOREIGN KEY (address_id) REFERENCES user_schema.address(address_id)
 );

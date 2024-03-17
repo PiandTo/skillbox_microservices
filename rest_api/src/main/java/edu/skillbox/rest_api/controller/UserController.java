@@ -26,6 +26,7 @@ public class UserController {
     
     @PostMapping()
     public User save(@RequestBody User entity) {
+        System.out.println(entity.toString());
         return userService.save(entity);
     }
 
