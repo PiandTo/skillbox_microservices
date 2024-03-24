@@ -17,6 +17,7 @@ import edu.skillbox.rest_api.entity.Gender;
 import edu.skillbox.rest_api.entity.User;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -58,5 +59,22 @@ class RestApiApplicationTests {
 			.andDo(print())
 			.andExpect(status().isOk())
 			.andExpect(jsonPath("$.name", Is.is(user.getName())));
+	}
+
+	@Test
+	void deleteUser() throws Exception {
+		this.mockMvc.perform(
+			delete("/user" + "/a99d56c6-a13d-427a-a443-8c77de18dc14")
+				.contentType(MediaType.APPLICATION_JSON))
+			.andDo(print())
+			.andExpect(status().isOk());
+	}
+
+	@Test
+	void getAllUsers() throws Exception {
+		this.mockMvc.perform(
+			get("/user/all"))
+			.andDo(print())
+			.andExpect(status().isOk());
 	}
 }

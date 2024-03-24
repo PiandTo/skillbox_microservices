@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @Operation(summary = "Get all users")
-    @GetMapping("/all")
+    @GetMapping(value = "/all", produces = "application/json")
     public List<User> getAll() {
         return userService.findAll();
     }

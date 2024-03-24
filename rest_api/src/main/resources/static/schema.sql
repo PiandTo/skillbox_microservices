@@ -24,7 +24,7 @@ create TABLE user_schema.user (
 -- );
 
 create TABLE user_schema.user_subscription (
-    user_id UUID,
+    user_id UUID PRIMARY KEY,
     subscription_id UUID,
     CONSTRAINT subscription_fk FOREIGN KEY(subscription_id) REFERENCES user_schema.user(id),
     CONSTRAINT user_fk FOREIGN KEY(user_id) REFERENCES user_schema.user(id)
