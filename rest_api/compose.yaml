@@ -10,6 +10,6 @@ services:
   app:
     image: 'docker.io/app/rest'
     ports:
-      - 8080
+      - '8888:8080'
     depends_on:
       - db
